@@ -1,0 +1,79 @@
+{
+  "manifest-version": 1,
+  "name": "app-automate",
+  "databox-type": "app",
+  "version": "0.2.4",
+  "description": "simple automation app",
+  "author": "Chris Greenhalgh",
+  "licence": "MIT",
+  "databox-type": "app",
+  "tags": [
+  ],
+  "homepage": "https://github.com/cgreenhalgh/app-automate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgreenhalgh/app-automate.git"
+  },
+  "datasources": [
+    {
+      "type": "TP-SetPowerState",
+      "required": false,
+      "name": "smart plug control",
+      "clientid": "TPLINK_PLUG_SET",
+      "granularities": []
+    },
+    {
+      "type": "light",
+      "required": false,
+      "name": "sensingkit light",
+      "clientid": "LIGHT",
+      "granularities": []
+    },
+    {
+      "type": "message-view:1",
+      "required": false,
+      "name": "Messages",
+      "clientid": "MESSAGES",
+      "granularities": []
+    },
+    {
+		"type": "twitterHashTagStream",
+		"required": false,
+		"name": "Twitter",
+		"clientid": "TWITTER"
+	},
+	{
+		"type": "truelayerUserTransactions",
+		"required": false,
+		"name": "Transactions",
+		"clientid": "TRANSACTIONS"
+	},
+	{
+		"type": "button-view-pressed:1",
+		"required": false,
+		"name": "Button pressed",
+		"clientid": "BUTTON"
+	},
+	{
+		"type": "button-view-html:1",
+		"required": false,
+		"name": "Button appearance",
+		"clientid": "BUTTONHTML"
+	},
+	{
+		"type": "accelerometer",
+		"required": false,
+		"name": "Phone accelerometer",
+		"clientid": "ACCELEROMETER"
+	},
+	{	"type": "step_counter",
+		"required": false,
+		"name": "Phone step counter",
+		"clientid": "STEP_COUNTER"
+	}
+  ],
+  "network-permissions": [],
+  "resource-requirements": {},
+  "volumes": [],
+  "export-whitelist": []
+}

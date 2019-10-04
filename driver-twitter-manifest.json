@@ -1,0 +1,52 @@
+{
+	"manifest-version": 1,
+	"name": "driver-twitter",
+	"version": "0.4.1",
+	"description": "A simple Databox driver to stream twitter data",
+	"author": "Anthony Brown <Anthony.Brown@nottingham.ac.uk> ()",
+	"license": "MIT",
+	"databox-type": "driver",
+	"tags": [
+		"store",
+		"blob",
+		"db",
+		"native",
+		"json",
+		"timeseries"
+	],
+	"homepage": "https://github.com/me-box/driver-twitter",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/me-box/driver-twitter.git"
+	},
+
+	"external-whitelist": [
+		{
+			"urls": [
+				"https://api.twitter.com/",
+				"https://stream.twitter.com/1.1/",
+				"https://userstream.twitter.com/1.1/",
+				"https://sitestream.twitter.com/1.1/",
+				"https://upload.twitter.com/1.1/"
+			],
+			"description": "Used by node package `twit` to access Twitter API"
+		}
+	],
+
+	"resource-requirements": {
+		"store": "core-store"
+	},
+
+	"provides": [
+		{
+			"data-source-type": "twitterHashTagStream",
+			"description": "Twitter user hashtag data",
+			"store-type": "ts/blob"
+		},
+		{
+			"data-source-type": "Test Actuator",
+			"description": "testActuator",
+			"store-type": "ts/blob"
+		}
+	]
+}

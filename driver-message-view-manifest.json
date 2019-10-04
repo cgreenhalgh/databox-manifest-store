@@ -1,0 +1,31 @@
+{
+    "manifest-version": 1,
+    "name": "driver-message-view",
+    "version": "0.1.0",
+    "description": "list of messages view",
+    "author": "chris.greenhalgh@nottingham.ac.uk",
+    "licence": "MIT",
+    "databox-type": "driver",
+    "tags": [
+    ],
+    "homepage": "https://github.com/cgreenhalgh/driver-message-view",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cgreenhalgh/driver-message-view.git"
+    },
+    "datasources": [],
+    "network-permissions": [],
+    "resource-requirements": {},
+    "export-whitelist": [],
+    "resource-requirements": {
+        "store": "core-store"
+    },
+    "provides": [
+        {
+            "data-source-type": "message-view:1",
+            "description": "Messages",
+            "store-type": "ts/blob",
+            "schema": {}
+        }
+    ]
+}
